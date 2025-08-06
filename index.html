@@ -10,6 +10,36 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap">
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+<!-- jQuery (required for Owl) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+
+<script>
+  $(document).ready(function(){
+    $(".owl-carousel").owlCarousel({
+      rtl: false, // Right to left direction
+      loop: true,
+      margin: 30,
+      nav: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
+    });
+  });
+</script>
+
 </head>
 <body>
     <!-- Preloader -->
@@ -31,7 +61,6 @@
             <!-- Logo -->
             <div class="logo-wrapper">
                 <a class="logo" href="index.html"> <img src="img/draftclass-logo.png" class="logo-img" alt=""> </a>
-                <!-- <a class="logo" href="index.html"><h2>Renta<span>x</span></h2></a> -->
             </div>
             <!-- Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span> </button>
@@ -68,8 +97,8 @@
                         <h6>* Draft Class Auto Hub</h6>
                         <h1>Reliable Car Hire in Kenya</h1>
                         <h5>From executive SUVs to tour vans — we’ve got you covered.</h5> 
-                        <a href="#fleet" class="button-1 mt-15 mb-15 mr-15">View Fleet <span class="ti-arrow-top-right"></span></a> 
-                        <a href="#booking" data-scroll-nav="1" class="button-2 mt-15 mb-15">Book Now <span class="ti-arrow-top-right"></span></a>
+                        <a href="cars.html" class="button-1 mt-15 mb-15 mr-15">View Fleet <span class="ti-arrow-top-right"></span></a> 
+                        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="button-2 mt-15 mb-15">Book Now <span class="ti-arrow-top-right"></span></a>
                     </div>
                 </div>
             </div>
@@ -213,17 +242,17 @@
                     <!-- Toyota Prado TX -->
                     <div class="item mb-15">
                         <div class="project-date">
-                            <a href="car-details.html" class="br">
+                            <a href="cars.html" class="br">
                                 <div class="year">KES 13,000 <span>/ day</span></div>
                             </a>
                         </div>
-                        <a href="car-details.html" class="img"> 
+                        <a href="cars.html" class="img"> 
                             <img src="img/fleet/prado.jpg" alt="Toyota Prado TX" class="img-fluid">
                             <div class="bottom-fade"></div>
                             <div class="arrow"><i class="ti-arrow-right"></i></div>
                         </a>
                         <div class="info">
-                            <div class="title"><a href="car-details.html">Toyota Prado TX</a></div>
+                            <div class="title"><a href="cars.html">Toyota Prado TX</a></div>
                             <div class="details"> 
                                 <span><i class="omfi-door"></i> 7 Seats</span>
                                 <span><i class="omfi-transmission"></i> Auto</span>
@@ -235,17 +264,17 @@
                     <!-- Land Cruiser V8 -->
                     <div class="item mb-15">
                         <div class="project-date">
-                            <a href="car-details.html" class="br">
+                            <a href="cars.html" class="br">
                                 <div class="year">KES 25,000 <span>/ day</span></div>
                             </a>
                         </div>
-                        <a href="car-details.html" class="img"> 
+                        <a href="cars.html" class="img"> 
                             <img src="img/fleet/landcruiser.jpg" alt="Land Cruiser V8" class="img-fluid">
                             <div class="bottom-fade"></div>
                             <div class="arrow"><i class="ti-arrow-right"></i></div>
                         </a>
                         <div class="info">
-                            <div class="title"><a href="car-details.html">Land Cruiser LC200</a></div>
+                            <div class="title"><a href="cars.html">Land Cruiser LC200</a></div>
                             <div class="details"> 
                                 <span><i class="omfi-door"></i> 7 Seats</span>
                                 <span><i class="omfi-transmission"></i> Auto</span>
@@ -257,17 +286,17 @@
                     <!-- Tour Van (Safari Ready) -->
                     <div class="item mb-15">
                         <div class="project-date">
-                            <a href="car-details.html" class="br">
+                            <a href="cars.html" class="br">
                                 <div class="year">KES 9,000 <span>/ day</span></div>
                             </a>
                         </div>
-                        <a href="car-details.html" class="img"> 
+                        <a href="cars.html" class="img"> 
                             <img src="img/fleet/Toyota Mark X.png" alt="Tour Van" class="img-fluid">
                             <div class="bottom-fade"></div>
                             <div class="arrow"><i class="ti-arrow-right"></i></div>
                         </a>
                         <div class="info">
-                            <div class="title"><a href="car-details.html">Tour Van (Safari Ready)</a></div>
+                            <div class="title"><a href="cars.html">Tour Van (Safari Ready)</a></div>
                             <div class="details"> 
                                 <span><i class="omfi-door"></i> 9 Seats</span>
                                 <span><i class="omfi-transmission"></i> Manual</span>
@@ -279,17 +308,17 @@
                     <!-- Range Rover Vogue -->
                     <div class="item mb-15">
                         <div class="project-date">
-                            <a href="car-details.html" class="br">
+                            <a href="cars.html" class="br">
                                 <div class="year">KES 20,000 <span>/ day</span></div>
                             </a>
                         </div>
-                        <a href="car-details.html" class="img"> 
+                        <a href="cars.html" class="img"> 
                             <img src="img/fleet/vogue.jpg" alt="Range Rover Vogue" class="img-fluid">
                             <div class="bottom-fade"></div>
                             <div class="arrow"><i class="ti-arrow-right"></i></div>
                         </a>
                         <div class="info">
-                            <div class="title"><a href="car-details.html">Range Rover Vogue</a></div>
+                            <div class="title"><a href="cars.html">Range Rover Vogue</a></div>
                             <div class="details"> 
                                 <span><i class="omfi-door"></i> 5 Seats</span>
                                 <span><i class="omfi-transmission"></i> Auto</span>
@@ -301,17 +330,17 @@
                     <!-- Coaster Bus -->
                     <div class="item mb-15">
                         <div class="project-date">
-                            <a href="car-details.html" class="br">
+                            <a href="cars.html" class="br">
                                 <div class="year">KES 10,000 <span>/ day</span></div>
                             </a>
                         </div>
-                        <a href="car-details.html" class="img"> 
+                        <a href="cars.html" class="img"> 
                             <img src="img/fleet/coaster.jfif" alt="Toyota Coaster Bus" class="img-fluid">
                             <div class="bottom-fade"></div>
                             <div class="arrow"><i class="ti-arrow-right"></i></div>
                         </a>
                         <div class="info">
-                            <div class="title"><a href="car-details.html">Toyota Coaster Bus</a></div>
+                            <div class="title"><a href="cars.html">Toyota Coaster Bus</a></div>
                             <div class="details"> 
                                 <span><i class="omfi-door"></i> 22 Seats</span>
                                 <span><i class="omfi-transmission"></i> Manual</span>
@@ -323,17 +352,17 @@
                     <!-- Subaru Outback -->
                     <div class="item mb-15">
                         <div class="project-date">
-                            <a href="car-details.html" class="br">
+                            <a href="cars.html" class="br">
                                 <div class="year">KES 7,500 <span>/ day</span></div>
                             </a>
                         </div>
-                        <a href="car-details.html" class="img"> 
+                        <a href="cars.html" class="img"> 
                             <img src="img/fleet/outback.jpg" alt="Subaru Outback" class="img-fluid">
                             <div class="bottom-fade"></div>
                             <div class="arrow"><i class="ti-arrow-right"></i></div>
                         </a>
                         <div class="info">
-                            <div class="title"><a href="car-details.html">Subaru Outback AWD</a></div>
+                            <div class="title"><a href="cars.html">Subaru Outback AWD</a></div>
                             <div class="details"> 
                                 <span><i class="omfi-door"></i> 5 Seats</span>
                                 <span><i class="omfi-transmission"></i> Auto</span>
@@ -357,94 +386,121 @@
             <div class="col-md-12 text-center mb-30">
                 <div class="section-subtitle">Explore Categories</div>
                 <div class="section-title">Our <span>Car Types</span></div>
-                <p class="section-description">From luxury sedans to rugged SUVs and versatile tour vans, choose a car that suits your trip, style, and comfort.</p>
+                <p class="section-description">
+                    From luxury sedans to rugged SUVs and versatile tour vans, choose a car that suits your trip, style, and comfort.
+                </p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="owl-carousel owl-theme">
-                    <!-- Luxury Cars -->
-                    <div class="item">
-                        <img src="img/fleet/Toyota Fortuner Legender.png" class="img-fluid" alt="Luxury Cars">
-                        <div class="title">
-                            <h4>Luxury Cars</h4>
-                        </div>
-                        <div class="curv-butn icon-bg">
-                            <a href="cars-luxury.html" class="vid">
-                                <div class="icon"><i class="ti-arrow-top-right"></i></div>
-                            </a>
-                        </div>
-                    </div>
 
-                    <!-- SUVs -->
-                    <div class="item">
-                        <img src="img/fleet/Mitsubishi Outlander.png" class="img-fluid" alt="SUVs">
-                        <div class="title">
-                            <h4>SUVs</h4>
-                        </div>
-                        <div class="curv-butn icon-bg">
-                            <a href="cars-suv.html" class="vid">
-                                <div class="icon"><i class="ti-arrow-top-right"></i></div>
-                            </a>
-                        </div>
-                    </div>
+       <div class="row">
+    <div class="col-md-12">
+        <div class="owl-carousel owl-theme">
 
-                    <!-- Tour Vans -->
-                    <div class="item">
-                        <img src="img/cars/tourvan.jpg" class="img-fluid" alt="Tour Vans">
-                        <div class="title">
-                            <h4>Tour Vans</h4>
-                        </div>
-                        <div class="curv-butn icon-bg">
-                            <a href="cars-tourvans.html" class="vid">
-                                <div class="icon"><i class="ti-arrow-top-right"></i></div>
-                            </a>
-                        </div>
+            <!-- Category Template Start -->
+            <div class="item text-center">
+                <div class="car-category-box">
+                    <div class="image-wrapper">
+                        <img src="img/fleet/Toyota Fortuner Legender.png" alt="Luxury Cars" style="width: 100%; height: auto;">
                     </div>
-
-                    <!-- Executive Sedans -->
-                    <div class="item">
-                        <img src="img/cars/sedan.jpg" class="img-fluid" alt="Executive Sedans">
-                        <div class="title">
-                            <h4>Sedans</h4>
-                        </div>
-                        <div class="curv-butn icon-bg">
-                            <a href="cars-sedans.html" class="vid">
-                                <div class="icon"><i class="ti-arrow-top-right"></i></div>
-                            </a>
-                        </div>
+                    <div class="title" style="margin-top: 15px; font-weight: 600; font-size: 1.1rem; color: black; text-align: center;">
+                        <h4 style="color: black; margin: 0;">Luxury Cars</h4>
                     </div>
-
-                    <!-- Hatchbacks -->
-                    <div class="item">
-                        <img src="img/cars/hatchback.jpg" class="img-fluid" alt="Hatchbacks">
-                        <div class="title">
-                            <h4>Hatchbacks</h4>
-                        </div>
-                        <div class="curv-butn icon-bg">
-                            <a href="cars-hatchbacks.html" class="vid">
-                                <div class="icon"><i class="ti-arrow-top-right"></i></div>
-                            </a>
-                        </div>
+                    <div class="curv-butn icon-bg">
+                        <a href="cars.html" class="vid">
+                            <div class="icon"><i class="ti-arrow-top-right"></i></div>
+                        </a>
                     </div>
-
-                    <!-- Coaster Buses -->
-                    <div class="item">
-                        <img src="img/cars/bus.jpg" class="img-fluid" alt="Coaster Buses">
-                        <div class="title">
-                            <h4>Coaster Buses</h4>
-                        </div>
-                        <div class="curv-butn icon-bg">
-                            <a href="cars-buses.html" class="vid">
-                                <div class="icon"><i class="ti-arrow-top-right"></i></div>
-                            </a>
-                        </div>
-                    </div>
-                </div> <!-- /.owl-carousel -->
+                </div>
             </div>
-        </div>
+
+            <div class="item text-center">
+                <div class="car-category-box">
+                    <div class="image-wrapper">
+                        <img src="img/fleet/Mitsubishi Outlander.png" alt="SUVs" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="title" style="margin-top: 15px; font-weight: 600; font-size: 1.1rem; color: black; text-align: center;">
+                        <h4 style="color: black; margin: 0;">SUVs</h4>
+                    </div>
+                    <div class="curv-butn icon-bg">
+                        <a href="cars.html" class="vid">
+                            <div class="icon"><i class="ti-arrow-top-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item text-center">
+                <div class="car-category-box">
+                    <div class="image-wrapper">
+                        <img src="img/fleet/tourvan2.jfif" alt="Tour Vans" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="title" style="margin-top: 15px; font-weight: 600; font-size: 1.1rem; color: black; text-align: center;">
+                        <h4 style="color: black; margin: 0;">Tour Vans</h4>
+                    </div>
+                    <div class="curv-butn icon-bg">
+                        <a href="cars.html" class="vid">
+                            <div class="icon"><i class="ti-arrow-top-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item text-center">
+                <div class="car-category-box">
+                    <div class="image-wrapper">
+                        <img src="img/fleet/mercedes-benz-e-class.png" alt="Sedans" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="title" style="margin-top: 15px; font-weight: 600; font-size: 1.1rem; color: black; text-align: center;">
+                        <h4 style="color: black; margin: 0;">Sedans</h4>
+                    </div>
+                    <div class="curv-butn icon-bg">
+                        <a href="cars.html" class="vid">
+                            <div class="icon"><i class="ti-arrow-top-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item text-center">
+                <div class="car-category-box">
+                    <div class="image-wrapper">
+                        <img src="img/fleet/Toyota Harrier.png" alt="Hatchbacks" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="title" style="margin-top: 15px; font-weight: 600; font-size: 1.1rem; color: black; text-align: center;">
+                        <h4 style="color: black; margin: 0;">Hatchbacks</h4>
+                    </div>
+                    <div class="curv-butn icon-bg">
+                        <a href="cars.html" class="vid">
+                            <div class="icon"><i class="ti-arrow-top-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item text-center">
+                <div class="car-category-box">
+                    <div class="image-wrapper">
+                        <img src="img/fleet/coaster.jfif" alt="Coaster Buses" style="width: 100%; height: auto;">
+                    </div>
+                    <div class="title" style="margin-top: 15px; font-weight: 600; font-size: 1.1rem; color: black; text-align: center;">
+                        <h4 style="color: black; margin: 0;">Coaster Buses</h4>
+                    </div>
+                    <div class="curv-butn icon-bg">
+                        <a href="cars.html" class="vid">
+                            <div class="icon"><i class="ti-arrow-top-right"></i></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Category Template End -->
+
+        </div> <!-- /.owl-carousel -->
+    </div>
+</div>
+
     </div>
 </section>
+
 
     <!-- divider line -->
     <div class="line-vr-section"></div>

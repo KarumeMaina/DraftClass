@@ -35,7 +35,7 @@
 31. Contact Form
 
 ----------------------------------------------------------- */
-$(function () {
+$(function() {
     "use strict";
     var wind = $(window);
     // ScrollIt
@@ -48,14 +48,14 @@ $(function () {
         onPageChange: null, // function(pageIndex) that is called when page is changed
         topOffset: -70 // offste (in px) for fixed top navigation
     });
-    
+
     // Preloader
     $("#preloader").fadeOut(500);
     $(".preloader-bg").delay(500).fadeOut(500);
     var wind = $(window);
-    
+
     // Navbar scrolling background
-    wind.on("scroll", function () {
+    wind.on("scroll", function() {
         var bodyScroll = wind.scrollTop(),
             navbar = $(".navbar"),
             logo = $(".navbar .logo> img");
@@ -67,30 +67,30 @@ $(function () {
             logo.attr('src', 'img/logo-light.png');
         }
     });
-   
+
     // Close navbar-collapse when a clicked
-    $(".navbar-nav .dropdown-item a").on('click', function () {
+    $(".navbar-nav .dropdown-item a").on('click', function() {
         $(".navbar-collapse").removeClass("show");
     });
-    
+
     // Close mobile menu "on click"
-    $(function () {
+    $(function() {
         var navMain = $(".scroll-init");
-        navMain.on("click", "a", null, function () {
+        navMain.on("click", "a", null, function() {
             navMain.collapse('hide');
         });
     });
-    
+
     // Sections background image from data background
     var pageSection = $(".bg-img, section");
-    pageSection.each(function (indx) {
+    pageSection.each(function(indx) {
         if ($(this).attr("data-background")) {
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
     });
-    
+
     // Slider  
-    $(document).ready(function () {
+    $(document).ready(function() {
         var owl = $('.header .owl-carousel');
         // Slider owlCarousel - (Inner Page Slider)
         $('.slider .owl-carousel').owlCarousel({
@@ -126,7 +126,7 @@ $(function () {
             nav: false,
             navText: ['<i class="ti-angle-left" aria-hidden="true"></i>', '<i class="ti-angle-right" aria-hidden="true"></i>']
         });
-        owl.on('changed.owl.carousel', function (event) {
+        owl.on('changed.owl.carousel', function(event) {
             var item = event.item.index - 2; // Position of the current item
             $('h6').removeClass('animated fadeInUp');
             $('h1').removeClass('animated fadeInUp');
@@ -146,7 +146,7 @@ $(function () {
             $('.owl-item').not('.cloned').eq(item).find('.button-2').addClass('animated fadeInUp');
         });
     });
-    
+
     // Team owlCarousel
     $('.team .owl-carousel').owlCarousel({
         loop: true,
@@ -171,7 +171,7 @@ $(function () {
             }
         }
     });
-    
+
     //  Services 1 owlCarousel 
     $('.services1 .owl-carousel').owlCarousel({
         loop: true,
@@ -195,7 +195,7 @@ $(function () {
             }
         }
     });
-    
+
     //  Services 2 owlCarousel 
     $('.services2 .owl-carousel').owlCarousel({
         loop: true,
@@ -219,7 +219,7 @@ $(function () {
             }
         }
     });
-    
+
     // Car Type 1 owlCarousel
     $('.car-types1 .owl-carousel').owlCarousel({
         loop: true,
@@ -244,7 +244,7 @@ $(function () {
             }
         }
     });
-    
+
     // Car Type 2 owlCarousel
     $('.car-types2 .owl-carousel').owlCarousel({
         loop: true,
@@ -269,7 +269,7 @@ $(function () {
             }
         }
     });
-    
+
     // Car Type 3 owlCarousel
     $('.car-types3 .owl-carousel').owlCarousel({
         loop: true,
@@ -294,7 +294,7 @@ $(function () {
             }
         }
     });
-    
+
     // Car Type 4 owlCarousel
     $('.car-types4 .owl-carousel').owlCarousel({
         loop: true,
@@ -319,7 +319,7 @@ $(function () {
             }
         }
     });
-    
+
     // Testimonials owlCarousel
     $('.testimonials .owl-carousel').owlCarousel({
         loop: true,
@@ -343,7 +343,7 @@ $(function () {
             }
         }
     });
-    
+
     // Cars 1 owlCarousel
     $(".cars1-carousel").owlCarousel({
         loop: true,
@@ -369,7 +369,7 @@ $(function () {
             }
         }
     });
-    
+
     //  Cars 2 owlCarousel 
     $('.cars2 .owl-carousel').owlCarousel({
         loop: true,
@@ -393,7 +393,7 @@ $(function () {
             }
         }
     });
-    
+
     //  Cars 3 owlCarousel 
     $('.cars3 .owl-carousel').owlCarousel({
         loop: true,
@@ -417,7 +417,7 @@ $(function () {
             }
         }
     });
-    
+
     //  Blog 1 owlCarousel 
     $('.blog1 .owl-carousel').owlCarousel({
         loop: true,
@@ -441,7 +441,7 @@ $(function () {
             }
         }
     });
-    
+
     //  Blog 2 owlCarousel 
     $('.blog2 .owl-carousel').owlCarousel({
         loop: true,
@@ -465,7 +465,7 @@ $(function () {
             }
         }
     });
-    
+
     // Clients owlCarousel
     $('.clients .owl-carousel').owlCarousel({
         loop: true,
@@ -490,7 +490,7 @@ $(function () {
             }
         }
     });
-    
+
     // MagnificPopup
     $(".img-zoom").magnificPopup({
         type: "image",
@@ -510,10 +510,10 @@ $(function () {
         preloader: false,
         fixedContentPos: false
     });
-    
+
     // Accordion
     if ($(".accordion-box").length) {
-        $(".accordion-box").on("click", ".acc-btn", function () {
+        $(".accordion-box").on("click", ".acc-btn", function() {
             var outerBox = $(this).parents(".accordion-box");
             var target = $(this).parents(".accordion");
             if ($(this).next(".acc-content").is(":visible")) {
@@ -531,11 +531,11 @@ $(function () {
             }
         });
     }
-    
+
     // Isotope Active Masonry Gallery
-    $('.gallery-items').imagesLoaded(function () {
+    $('.gallery-items').imagesLoaded(function() {
         // Add isotope on click filter function
-        $('.gallery-filter li').on('click', function () {
+        $('.gallery-filter li').on('click', function() {
             $(".gallery-filter li").removeClass("active");
             $(this).addClass("active");
             var selector = $(this).attr('data-filter');
@@ -554,18 +554,18 @@ $(function () {
             layoutMode: 'masonry',
         });
     });
-    
+
     // Animations
-    var contentWayPoint = function () {
+    var contentWayPoint = function() {
         var i = 0;
-        $('.animate-box').waypoint(function (direction) {
+        $('.animate-box').waypoint(function(direction) {
             if (direction === 'down' && !$(this.element).hasClass('animated')) {
                 i++;
                 $(this.element).addClass('item-animate');
-                setTimeout(function () {
-                    $('body .animate-box.item-animate').each(function (k) {
+                setTimeout(function() {
+                    $('body .animate-box.item-animate').each(function(k) {
                         var el = $(this);
-                        setTimeout(function () {
+                        setTimeout(function() {
                             var effect = el.data('animate-effect');
                             if (effect === 'fadeIn') {
                                 el.addClass('fadeIn animated');
@@ -585,24 +585,24 @@ $(function () {
             offset: '85%'
         });
     };
-    $(function () {
+    $(function() {
         contentWayPoint();
     });
-    
+
     // YouTubePopUp
     $("a.vid").YouTubePopUp();
-    
+
     // Select2
     $('.select2').select2({
         minimumResultsForSearch: Infinity
     });
-    
+
     // Datepicker
     $(".datepicker").datepicker({
         orientation: "top"
-        
+
     });
-    
+
     // Scroll back to top
     var progressPath = document.querySelector('.progress-wrap path');
     var pathLength = progressPath.getTotalLength();
@@ -611,7 +611,7 @@ $(function () {
     progressPath.style.strokeDashoffset = pathLength;
     progressPath.getBoundingClientRect();
     progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    var updateProgress = function () {
+    var updateProgress = function() {
         var scroll = $(window).scrollTop();
         var height = $(document).height() - $(window).height();
         var progress = pathLength - (scroll * pathLength / height);
@@ -621,21 +621,21 @@ $(function () {
     $(window).scroll(updateProgress);
     var offset = 150;
     var duration = 550;
-    jQuery(window).on('scroll', function () {
+    jQuery(window).on('scroll', function() {
         if (jQuery(this).scrollTop() > offset) {
             jQuery('.progress-wrap').addClass('active-progress');
         } else {
             jQuery('.progress-wrap').removeClass('active-progress');
         }
     });
-    jQuery('.progress-wrap').on('click', function (event) {
+    jQuery('.progress-wrap').on('click', function(event) {
         event.preventDefault();
         jQuery('html, body').animate({
             scrollTop: 0
         }, duration);
         return false;
     })
-    
+
     // Contact Form
     var form = $('.contact__form'),
         message = $('.contact__msg'),
@@ -644,7 +644,7 @@ $(function () {
     function done_func(response) {
         message.fadeIn().removeClass('alert-danger').addClass('alert-success');
         message.text(response);
-        setTimeout(function () {
+        setTimeout(function() {
             message.fadeOut();
         }, 2000);
         form.find('input:not([type="submit"]), textarea').val('');
@@ -653,11 +653,11 @@ $(function () {
     function fail_func(data) {
         message.fadeIn().removeClass('alert-success').addClass('alert-success');
         message.text(data.responseText);
-        setTimeout(function () {
+        setTimeout(function() {
             message.fadeOut();
         }, 2000);
     }
-    form.submit(function (e) {
+    form.submit(function(e) {
         e.preventDefault();
         form_data = $(this).serialize();
         $.ajax({
@@ -668,22 +668,22 @@ $(function () {
     });
 });
 
-   // Slider Grid Background
-    (function () {
-            var imageElements = document.querySelectorAll('.grid-img');
-            var itemElements = document.querySelectorAll('.grid-con');
-            if (itemElements.length) {
-              itemElements.forEach(function (item, index) {
-                item.addEventListener('mouseenter', function () {
-                  imageElements.forEach(function (image) {
+// Slider Grid Background
+(function() {
+    var imageElements = document.querySelectorAll('.grid-img');
+    var itemElements = document.querySelectorAll('.grid-con');
+    if (itemElements.length) {
+        itemElements.forEach(function(item, index) {
+            item.addEventListener('mouseenter', function() {
+                imageElements.forEach(function(image) {
                     image.classList.remove('grid-img-active');
-                  });
-                  itemElements.forEach(function (card) {
-                    card.classList.remove('grid-con-active');
-                  });
-                  item.classList.add('grid-con-active');
-                  imageElements[index].classList.add('grid-img-active');
                 });
-              });
-            }
-          })();
+                itemElements.forEach(function(card) {
+                    card.classList.remove('grid-con-active');
+                });
+                item.classList.add('grid-con-active');
+                imageElements[index].classList.add('grid-img-active');
+            });
+        });
+    }
+})();
